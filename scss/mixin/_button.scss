@@ -1,0 +1,66 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.btn {
+    width: 230px;
+    padding: 16px 0;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: $btn-color;
+    color: $main-color;
+    transition: ease-out .3s;
+
+    @include mq('pc') {
+        &:hover {
+            border: 1px solid $btn-color;
+            background-color: $main-color;
+            color: $btn-color;
+        }
+    }
+
+    @include mq('tab') {
+        & {
+            width: 80%;
+        }
+    }
+}
+
+.top-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid $accent-color;
+
+    @include mq('sp') {
+        & {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}
+
+.arrow-top{
+
+    &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    display: block;
+    border-top: 3px solid $accent-color;
+    border-left: 3px solid $accent-color;
+    }
+}
