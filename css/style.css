@@ -154,6 +154,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
   width: 15px;
   height: 15px;
   margin-top: 3px;
