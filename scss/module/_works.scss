@@ -1,0 +1,72 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.works-lead {
+    margin-bottom: 100px;
+    text-align: center;
+
+    @include mq('tab') {
+        margin-bottom: 80px;
+    }
+
+    @include mq('sp') {
+        margin-bottom: 60px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+}
+
+.works-contents {
+    margin-bottom: 100px;
+    display: flex;
+
+    @include mq('tab') {
+        margin-bottom: 80px;
+    }
+
+    @include mq('sp') {
+        margin-bottom: 60px;
+        display: block;
+    }
+}
+
+.works-image {
+    width: 470px;
+
+    @include mq('sp') {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    & + & {
+        margin-top: 140px;
+
+        @include mq('sp') {
+            margin-top: 80px;
+        }
+    }
+
+    &:nth-child(even) {
+        margin-left: 60px;
+
+        @include mq('sp') {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    a {
+        box-shadow: $box-shadow;
+        transition: ease-out .3s;
+
+        @include mq('pc') {
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: $box-shadow-hover;
+            }
+        }
+    }
+}

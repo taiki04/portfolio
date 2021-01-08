@@ -1,0 +1,79 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/font';
+@import '../setting/size';
+
+.skills-inner {
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include mq('sp') {
+        width: 860px;
+        padding: 0 20px;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.card {
+    flex: 0 1 29.63%;
+    border-radius: 3px;
+    box-shadow: $box-shadow;
+    transition: ease .3s;
+
+    @include mq('pc') {
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: $box-shadow-hover;
+        }
+        
+    }
+
+
+
+    @include mq('sp') {
+        width: 100%;
+        height: auto;
+
+        &:not(last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-image {
+    width: 120px;
+    margin: 0 auto 40px;
+}
+
+.card-title {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.card-title-en {
+    font-family: $font-family-wf;
+    font-weight: 700;
+}
+
+.card-text {
+    text-align: left;
+    line-height: 1.71;
+    font-size: 14px;
+}

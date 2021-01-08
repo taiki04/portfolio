@@ -1,0 +1,16 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.sns-icon {
+    font-size: 48px;
+    color: $accent-color;
+
+    @include mq('tab') {
+        font-size: 44px;
+    }
+
+    @include mq('sp') {
+        font-size: 40px;
+    }
+}

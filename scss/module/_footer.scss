@@ -1,0 +1,51 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/font';
+@import '../setting/icon';
+@import '../setting/size';
+
+
+.footer {
+    background-color: $footer-color;
+}
+
+.footer-inner {
+    padding: 54px 0 40px 0;
+
+    @include mq('tab') {
+        padding: 48px 0 34px 0;
+    }
+
+    @include mq('sp') {
+        padding: 38px 0 24px 0;
+    }
+}
+
+.footer-list {
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list__item {
+    width: 45px;
+    text-align: center;
+
+    & + & {
+        margin-left: 40px;
+
+        @include mq('tab') {
+            margin-left: 38px;
+        }
+
+        @include mq('sp') {
+            margin-left: 36px;
+        }
+    }
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    font-family: $font-family-wf;
+}

@@ -1,0 +1,33 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.breadcrumb-list {
+    display: flex;
+}
+
+.breadcrumb-item {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+
+    &:nth-child(1):after {
+        content: '>';
+        position: absolute;
+        top: 0;
+        right: -25px;
+    }
+
+    & + & {
+        margin-left: 40px;
+    }
+
+    a {
+        transition: ease-out .3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

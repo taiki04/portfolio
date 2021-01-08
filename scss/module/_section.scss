@@ -1,0 +1,79 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/font';
+@import '../setting/size';
+
+.section {
+    padding: 120px 0 140px 0;
+
+    @include mq('tab') {
+        padding: 100px 0 120px 0;
+    }
+
+    @include mq('sp') {
+        padding: 80px 0 100px 0;
+    }
+}
+
+.section-bg {
+    background-color: $sub-color;
+}
+
+.top-title-block {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-family: $font-family-wf;
+
+    span {
+        font-size: 48px;
+    }
+
+    @include mq('tab') {
+        font-size: 30px;
+    }
+
+    @include mq('sp') {
+        font-size: 28px;
+    }
+}
+
+.section-title-lead {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+
+    @include mq('tab') {
+        padding: 0 18px;
+        font-size: 12px;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 1px;
+        display: block;
+        background-color: $accent-color;
+
+        @include mq('tab') {
+            width: 8px;
+        }
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
+

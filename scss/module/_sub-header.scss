@@ -1,0 +1,14 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.sub-header {
+    margin-bottom: 40px;
+}
+
+.sub-header-inner {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+}

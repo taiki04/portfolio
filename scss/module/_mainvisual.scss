@@ -1,0 +1,43 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/font';
+@import '../setting/size';
+
+.mainvisual {
+    position: relative;
+    width: 100%;
+}
+
+.mainvisual-title-block {
+    padding: 319.5px 0;
+    text-align: center;
+
+    @include mq('tab') {
+        padding: 300px 0;
+    }
+}
+
+.mainvisual-title {
+    margin-bottom: 8px;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: $text-shadow;
+    font-family: $font-family-wf;
+
+    @include mq('tab') {
+        font-size: 44px;
+    }
+
+    @include mq('sp') {
+        font-size: 40px;
+    }
+}
+
+.mainvisual-lead {
+
+    font-family: $font-family-wf;
+
+    @include mq('tab') {
+        font-size: 14px;
+    }
+}

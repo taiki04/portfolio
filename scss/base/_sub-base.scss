@@ -1,0 +1,14 @@
+@import '../mixin/mediaquery';
+@import '../setting/color';
+@import '../setting/size';
+
+.sub-inner {
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include mq('sp') {
+        padding: 0 20px;
+    }
+}
